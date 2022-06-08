@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rutgerscafe.OrderingCoffeeController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="TOP" layoutX="205.0" layoutY="14.0" prefHeight="56.0" prefWidth="190.0" text="Ordering Coffee">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="205.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Coffee.jpg" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="creamCheckBox" layoutX="54.0" layoutY="242.0" mnemonicParsing="false" onAction="#checkBoxSelection" prefHeight="18.0" prefWidth="74.0" text="Cream">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="milkCheckBox" layoutX="54.0" layoutY="285.0" mnemonicParsing="false" onAction="#checkBoxSelection" prefHeight="18.0" prefWidth="74.0" text="Milk">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="whippedCreamCheckBox" layoutX="54.0" layoutY="332.0" mnemonicParsing="false" onAction="#checkBoxSelection" prefHeight="21.0" prefWidth="136.0" text="Whipped Cream">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="syrupCheckBox" layoutX="181.0" layoutY="242.0" mnemonicParsing="false" onAction="#checkBoxSelection" prefHeight="18.0" prefWidth="74.0" text="Syrup">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="caramelCheckBox" layoutX="181.0" layoutY="285.0" mnemonicParsing="false" onAction="#checkBoxSelection" prefHeight="21.0" prefWidth="87.0" text="Caramel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <ComboBox fx:id="comboCoffeeSizes" layoutX="395.0" layoutY="207.0" onAction="#selection" prefHeight="26.0" prefWidth="129.0" />
+      <ComboBox fx:id="comboCoffeeQuantity" layoutX="395.0" layoutY="250.0" onAction="#selection" prefHeight="26.0" prefWidth="129.0" />
+      <TextArea fx:id="subtotalText" layoutX="395.0" layoutY="296.0" prefHeight="26.0" prefWidth="129.0" />
+      <Button layoutX="416.0" layoutY="353.0" mnemonicParsing="false" onAction="#addToOrder" text="Add to Order" />
+   </children>
+</AnchorPane>
